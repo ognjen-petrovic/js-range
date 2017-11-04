@@ -6,7 +6,7 @@ Javascript math range
 npm install simple-range
 ```
 
-##Examples:
+## Examples:
 ```javascript
 const Range = require('simple-range');
 
