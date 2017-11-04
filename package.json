@@ -1,0 +1,26 @@
+{
+  "name": "simple-range",
+  "version": "1.0.0",
+  "description": "Math range",
+  "main": "range.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ognjen-petrovic/js-range.git"
+  },
+  "keywords": [
+    "Math",
+    "range",
+    "interval",
+    "step",
+    "array"
+  ],
+  "author": "ognjen.petrovic2@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ognjen-petrovic/js-range/issues"
+  },
+  "homepage": "https://github.com/ognjen-petrovic/js-range#readme"
+}
