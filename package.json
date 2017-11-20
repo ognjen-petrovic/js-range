@@ -1,6 +1,6 @@
 {
   "name": "simple-range",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Math range",
   "main": "range.js",
   "scripts": {
