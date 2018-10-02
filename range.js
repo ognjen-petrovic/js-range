@@ -35,9 +35,19 @@ class Range
     _object2Range(o)
     {
         let step = ('step' in o) ? o.step : this._getRangeStep(o.from, o.to);
-        for (let n = o.from, to = o.to; n <= to; n = Math.round((n + step) * 1e12) / 1e12)
+        if (o.from > o.to)
         {
-            this._a.push(n);
+            for (let n = o.from, to = o.to; n >= to; n = Math.round((n + step) * 1e12) / 1e12)
+            {
+                this._a.push(n);
+            }
+        }
+        else
+        {
+            for (let n = o.from, to = o.to; n <= to; n = Math.round((n + step) * 1e12) / 1e12)
+            {
+                this._a.push(n);
+            }
         }
     }
 
@@ -62,7 +72,13 @@ class Range
 
     _getRangeStep(from, to)
     {
-        return Math.min(this._getNumPrecision(from), this._getNumPrecision(to));
+        let step = Math.min(this._getNumPrecision(from), this._getNumPrecision(to));
+        if (from > to)
+        {
+            step = step * -1;
+        } 
+
+        return step;
     }
 
     toString()
