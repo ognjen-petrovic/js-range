@@ -42,4 +42,9 @@ describe("Range", function () {
 		let r = new Range([-3, o1, 0, a1, 16, o2]);
 		expect(r.toString()).toEqual('[-3,10,11,12,13,14,15,0,1,4,5,7,16,0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1]');
 	});
+
+	it("can handle negative step", function () {
+		let r = new Range({from:20, to:15});
+		expect(r.toString()).toEqual('[20,19,18,17,16,15]');
+	});
 });
